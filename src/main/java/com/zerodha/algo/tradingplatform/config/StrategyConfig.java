@@ -9,6 +9,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
+@com.fasterxml.jackson.databind.annotation.JsonNaming(com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class StrategyConfig {
     
     @NotBlank

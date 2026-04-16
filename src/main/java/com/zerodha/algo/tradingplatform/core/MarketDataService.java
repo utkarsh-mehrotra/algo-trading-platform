@@ -8,4 +8,5 @@ public interface MarketDataService {
     void unsubscribe(String instrumentToken);
     
     List<Candlestick> getHistoricalBars(String instrumentToken, String timeframe, int limit);
+    void saveCompletedBar(Candlestick bar);
 }

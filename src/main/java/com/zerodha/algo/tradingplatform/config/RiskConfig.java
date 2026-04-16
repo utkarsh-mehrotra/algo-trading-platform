@@ -7,6 +7,7 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
+@com.fasterxml.jackson.databind.annotation.JsonNaming(com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class RiskConfig {
     
     @DecimalMin("0.0")
