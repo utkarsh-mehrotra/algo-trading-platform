@@ -1,0 +1,9 @@
+resilience4j.retry:
+  instances:
+    kiteApi:
+      maxAttempts: 3
+      waitDuration: 500ms
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
+      maxWaitDuration: 2000ms
+      enableRandomizedWait: true # Jitter

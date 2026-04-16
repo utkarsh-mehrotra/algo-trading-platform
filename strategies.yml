@@ -1,0 +1,27 @@
+strategies:
+  - id: ema_crossover_nifty
+    class: EMACrossoverStrategy
+    instruments: [NIFTY50]
+    timeframe: 5m
+    warmup_bars: 26
+    risk:
+      max_risk_per_trade_pct: 1.0
+      stop_loss_pct: 1.5
+      target_pct: 3.0
+    schedule:
+      entry_window: "09:20–14:30"
+      exit_by: "15:10"
+
+  - id: short_straddle_banknifty
+    class: ShortStraddleStrategy
+    instruments: [BANKNIFTY]
+    timeframe: 15m
+    warmup_bars: 10
+    risk:
+      max_net_delta: 0.3
+      max_vega_pct_capital: 2.0
+      max_theta_burn_daily_pct: 0.5
+      max_gamma_per_rupee: 0.08
+    schedule:
+      entry_window: "09:30–11:00"
+      exit_by: "15:10"
